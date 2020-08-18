@@ -28,19 +28,19 @@ table {
 <h1>Tutor Database</h1>
 <?
 
-$connection = mysql_connect('localhost', 'root', 'root'); //The Blank string is the password
+$connection = mysql_connect('localhost', 'root', 'root');
 mysql_select_db('tutoringCompany');
 
-$query = "SELECT * FROM tutor"; //You don't need a ; like you do in SQL
+$query = "SELECT * FROM tutor"; 
 $result = mysql_query($query);
 
-echo "<table>"; // start a table tag in the HTML
+echo "<table>"; 
 
-while($row = mysql_fetch_array($result)){   //Creates a loop to loop through results
-echo "<tr><td>" . $row['name'] . "</td><td>" . $row['age'] . "</td><td>" . $row['location'] . "</td></tr>";  //$row['index'] the index here is a field name
+while($row = mysql_fetch_array($result)){   
+echo "<tr><td>" . $row['name'] . "</td><td>" . $row['age'] . "</td><td>" . $row['location'] . "</td></tr>";  
 }
 
-echo "</table>"; //Close the table in HTML
+echo "</table>"; 
 
 mysql_close(); //Make sure to close out the database connection
 ?>
